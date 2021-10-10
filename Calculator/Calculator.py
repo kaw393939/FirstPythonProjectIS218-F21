@@ -1,5 +1,4 @@
-class Calculator:
-    result = 0
+class Calc:
 
     def __init__(self):
         pass

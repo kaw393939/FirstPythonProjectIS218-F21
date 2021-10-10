@@ -1,13 +1,13 @@
 import unittest
 
-from Calculator.Calculator import Calculator
+from Calculator.Calculator import Calc
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.calculator = Calculator()
+        self.calculator = Calc()
 
     def test_instantiate_calculator(self):
-        self.assertIsInstance(self.calculator, Calculator)
+        self.assertIsInstance(self.calculator, Calc)
 
 if __name__ == '__main__':
     unittest.main()
