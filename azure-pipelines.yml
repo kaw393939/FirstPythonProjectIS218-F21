@@ -10,6 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.9'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
