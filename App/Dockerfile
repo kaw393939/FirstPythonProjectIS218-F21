@@ -1,4 +1,4 @@
-FROM python:3.9-alpine
+FROM python:3.8-alpine
 RUN pip install --upgrade pip
 RUN adduser -D myuser
 ENV FLASK_APP=app.py
@@ -12,6 +12,7 @@ ENV PATH="/home/myuser/.local/bin:${PATH}"
 COPY --chown=myuser:myuser . .
 USER myuser
 RUN pip install --user -r requirements.txt
+RUN pytest --pylint --pylint-rcfile=tests/.pylintrc
 # CMD ["python", "-m", "unittest", "discover", "-s","Tests"]
 # run the command to start uWSGI
-CMD ["uwsgi", "app.ini"]
+#CMD ["uwsgi", "app.ini"]

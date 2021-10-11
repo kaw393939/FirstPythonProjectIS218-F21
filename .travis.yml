@@ -8,7 +8,7 @@ install:
 # command to run tests
 script:
   - pytest --pylint
-  - python -m  unittest discover -s  Tests
+#  - python -m  unittest discover -s  Tests
 
 branches:
   only:
