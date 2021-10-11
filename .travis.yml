@@ -1,11 +1,10 @@
 language: python
 python:
   - "3.9"
-install:
-  - /home/myuser/pip install -r requirements.txt
-# command to run tests
 script:
-  - /home/myuser/python -m  unittest discover -s  Tests
+  - cd App
+  - pip install -r requirements.txt
+  - python -m  unittest discover -s  Tests
 
 branches:
   only:
