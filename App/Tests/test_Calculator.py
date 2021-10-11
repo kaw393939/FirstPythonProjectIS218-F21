@@ -1,6 +1,6 @@
 import unittest
 
-from Calculator.Calculator import Calculator
+from calculator.calculator import Calculator
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
