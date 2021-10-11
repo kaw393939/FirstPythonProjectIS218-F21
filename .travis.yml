@@ -1,9 +1,12 @@
 language: python
 python:
   - "3.9"
-script:
+before_install:
   - cd App
+install:
   - pip install -r requirements.txt
+# command to run tests
+script:
   - python -m  unittest discover -s  Tests
 
 branches:
