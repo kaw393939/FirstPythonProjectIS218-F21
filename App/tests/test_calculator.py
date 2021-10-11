@@ -1,14 +1,10 @@
-"""Testing calc_mod"""
-import unittest
+import pytest
 from calc_mod.calculator import Simple
 
-class CalculatorTestCase(unittest.TestCase):
-    """Calculator Module tests"""
-    def setUp(self) -> None:
-        """Setup the Test runs before each test method calc_mod"""
-        self.calculator = Simple()
-    def test_instantiate_calculator(self):
-        """Tests Object Instantiation"""
-        self.assertIsInstance(self.calculator, Simple)
-if __name__ == '__main__':
-    unittest.main()
+def test_zero_division():
+    with pytest.raises(ZeroDivisionError):
+        1 / 0
+
+def test_simple_instance():
+    calculator = Simple()
+    isinstance(calculator,Simple)

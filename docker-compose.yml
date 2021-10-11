@@ -4,7 +4,7 @@ services:
     build: ./app
     restart: always
     environment:
-      - APP_NAME=MyFlaskApp
+      - APP_NAME=flask
     expose:
       - 8080
   nginx:

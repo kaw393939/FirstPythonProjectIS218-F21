@@ -12,7 +12,8 @@ ENV PATH="/home/myuser/.local/bin:${PATH}"
 COPY --chown=myuser:myuser . .
 USER myuser
 RUN pip install --user -r requirements.txt
-RUN pytest --pylint --pylint-rcfile=tests/.pylintrc
-# CMD ["python", "-m", "unittest", "discover", "-s","Tests"]
-# run the command to start uWSGI
-#CMD ["uwsgi", "app.ini"]
+#If you uncomment the line below you can run the test and lint when the container is built.
+#You can open a terminal to run the tests manually
+#RUN pytest --pylint --pylint-rcfile=tests/.pylintrc
+# uncommment to run the command to start uWSGI, you can't run tests and start the server.
+CMD ["uwsgi", "app.ini"]

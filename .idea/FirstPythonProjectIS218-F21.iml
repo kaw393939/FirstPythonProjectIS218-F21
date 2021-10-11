@@ -9,4 +9,12 @@
     <orderEntry type="jdk" jdkName="Remote Python 3.9.7 Docker (is218calcimage:latest) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/app/templates" />
+      </list>
+    </option>
+  </component>
 </module>
