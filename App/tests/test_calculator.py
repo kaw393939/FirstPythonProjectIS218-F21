@@ -1,14 +1,14 @@
-"""Testing calc"""
+"""Testing calc_mod"""
 import unittest
-from calc.base import Base
+from calc_mod.calculator import Simple
 
 class CalculatorTestCase(unittest.TestCase):
     """Calculator Module tests"""
     def setUp(self) -> None:
-        """Setup the Test runs before each test method calc"""
-        self.calculator = Base()
+        """Setup the Test runs before each test method calc_mod"""
+        self.calculator = Simple()
     def test_instantiate_calculator(self):
         """Tests Object Instantiation"""
-        self.assertIsInstance(self.calculator, Base)
+        self.assertIsInstance(self.calculator, Simple)
 if __name__ == '__main__':
     unittest.main()
